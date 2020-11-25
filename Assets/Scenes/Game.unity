@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 898839449}
   - component: {fileID: 898839453}
   m_Layer: 0
-  m_Name: Goal(left)
+  m_Name: Goal1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1003,11 +1003,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 898839448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f39b42bb169542cabad30c1cb234b28, type: 3}
+  m_Script: {fileID: 11500000, guid: 35e5f7eeb6a884928a9a0f1cee6e8f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Score2Text: 
-  EndCount: 11
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,7 +1564,7 @@ GameObject:
   - component: {fileID: 1409650446}
   - component: {fileID: 1409650450}
   m_Layer: 0
-  m_Name: Goal(right)
+  m_Name: Goal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1656,11 +1655,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1409650445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1a5821c737d041a193ad679dc9815ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 448f7a1da39854196b92997d233866e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Score1Text: 
-  EndCount: 11
 --- !u!1 &1514516843
 GameObject:
   m_ObjectHideFlags: 0
