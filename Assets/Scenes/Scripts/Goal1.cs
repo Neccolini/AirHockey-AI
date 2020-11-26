@@ -9,7 +9,7 @@ public class Goal1: MonoBehaviour
 
     public string Score2Text; // 表示する文字列 Player2: x点
     public static int Player2Score=0; // 点数
-    const int EndCount=3; // 終了する点数 <-ここを変える
+    const int EndCount=8; // 終了する点数 <-ここを変える
     GameObject puck; //パック
     GameObject targetText; //テキストオブジェクト
     private bool isGoal=false;

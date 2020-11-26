@@ -7,14 +7,21 @@ public class Player1Controll :MonoBehaviour
     // パックと衝突時にパックに与える力を増幅
     float radius = 1.0f;
     float power = 200.0f;
-
+    private Vector3 Velocity{get;set;}=Vector3.zero;
+    private Rigidbody RB{get;set;}
+    private Vector3 StartPosition {get;set;}
+    private Quaternion StartRotation {get;set;}
+    private Vector3 Area{get;set; }=new Vector3(4.1f,0f,5.2f);
     void Start()
     {
-        //pass
+        RB=GetComponent<Rigidbody>();
+        StartPosition=transform.localPosition;
+        StartRotation=transform.rotation;
     }
 
     void Update()
     {
+
         // マウスの位置にPlayer1を置く
         Vector3 objectPointInScreen = Camera.main.WorldToScreenPoint(this.transform.position);
         Vector3 mousePointInScreen = new Vector3(Input.mousePosition.x,
@@ -24,9 +31,12 @@ public class Player1Controll :MonoBehaviour
         Vector3 mousePointInWorld = Camera.main.ScreenToWorldPoint(mousePointInScreen);
         this.transform.position = mousePointInWorld;
         // 動ける範囲を制限
-        Vector3 pos=this.transform.position;
-        this.transform.position = new Vector3(Mathf.Clamp(pos.x, -9.2f, -1.0f), 
-            pos.y, Mathf.Clamp(pos.z, -5.2f, 5.3f));
+        //RB.velocity = Velocity;
+        transform.localPosition = new Vector3(
+            Mathf.Clamp(transform.localPosition.x, StartPosition.x - Area.x, StartPosition.x + Area.x),
+            Mathf.Clamp(transform.localPosition.y, StartPosition.y - Area.y, StartPosition.y + Area.y),
+            Mathf.Clamp(transform.localPosition.z, StartPosition.z - Area.z, StartPosition.z + Area.z)
+        );
     }
 
     // パックと衝突時にパックに与える力を増幅
